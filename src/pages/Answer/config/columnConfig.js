@@ -20,7 +20,6 @@ const columnConfig = {
             dataIndex: 'finishNum',
             key: 'finishNum'
         },
-
         {
             title: '正确率',
             dataIndex: 'correct',
@@ -31,14 +30,6 @@ const columnConfig = {
                 } else {
                     return 0 + '%'
                 }
-            }
-        },
-        {
-            title: '创建时间',
-            dataIndex: 'createdAt',
-            key: 'createdAt',
-            render: (text) => {
-                return text.substring(0, 10)
             }
         }
     ]

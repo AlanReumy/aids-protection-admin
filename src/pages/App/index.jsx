@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
+import { QuestionCircleOutlined, RadarChartOutlined } from '@ant-design/icons'
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
-    VideoCameraOutlined,
-    UploadOutlined
+    VideoCameraOutlined
 } from '@ant-design/icons'
-import SubMenu from 'antd/lib/menu/SubMenu'
 const { Header, Sider, Content } = Layout
 
 function App() {
@@ -28,20 +27,12 @@ function App() {
                     <Menu.Item key="2" icon={<UserOutlined />}>
                         <Link to={{ pathname: '/user' }}>用户管理</Link>
                     </Menu.Item>
-                    <Menu.Item key="3" icon={<UploadOutlined />}>
+                    <Menu.Item key="3" icon={<RadarChartOutlined />}>
                         <Link to={{ pathname: '/game' }}>竞赛管理</Link>
                     </Menu.Item>
-                    <SubMenu
-                        key="sub1"
-                        icon={<UserOutlined />}
-                        title="问答管理"
-                    >
-                        <Menu.Item key="4">
-                            <Link to={{ pathname: '/question' }}>问题管理</Link>
-                        </Menu.Item>
-                        <Menu.Item key="5">回答管理</Menu.Item>
-                        <Menu.Item key="6">评论管理</Menu.Item>
-                    </SubMenu>
+                    <Menu.Item key="4" icon={<QuestionCircleOutlined />}>
+                        <Link to={{ pathname: '/question' }}>问题管理</Link>
+                    </Menu.Item>
                 </Menu>
             </Sider>
             <Layout className="site-layout">

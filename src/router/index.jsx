@@ -5,6 +5,7 @@ import Home from '../pages/Home/'
 import User from '../pages/User/'
 import Game from '../pages/Game'
 import Question from '../pages/Question'
+import Answer from '../pages/Answer'
 
 const BaseRouter = () => {
     return (
@@ -15,6 +16,7 @@ const BaseRouter = () => {
                     <Route path="/user" element={<User />}></Route>
                     <Route path="/game" element={<Game />}></Route>
                     <Route path="/question" element={<Question />}></Route>
+                    <Route path="/answer" element={<Answer />}></Route>
                 </Route>
                 <Route path="/login" element={<Login />}></Route>
             </Routes>
