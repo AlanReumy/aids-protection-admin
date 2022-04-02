@@ -6,6 +6,7 @@ import User from '../pages/User/'
 import Game from '../pages/Game'
 import Question from '../pages/Question'
 import Answer from '../pages/Answer'
+import CreateVolunteer from '../pages/Volunteer/create'
 
 const BaseRouter = () => {
     return (
@@ -17,6 +18,10 @@ const BaseRouter = () => {
                     <Route path="/game" element={<Game />}></Route>
                     <Route path="/question" element={<Question />}></Route>
                     <Route path="/answer" element={<Answer />}></Route>
+                    <Route
+                        path="/volunteer/create"
+                        element={<CreateVolunteer />}
+                    ></Route>
                 </Route>
                 <Route path="/login" element={<Login />}></Route>
             </Routes>

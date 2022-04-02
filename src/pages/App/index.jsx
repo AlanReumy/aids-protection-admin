@@ -8,6 +8,7 @@ import {
     UserOutlined,
     VideoCameraOutlined
 } from '@ant-design/icons'
+const { SubMenu } = Menu
 const { Header, Sider, Content } = Layout
 
 function App() {
@@ -33,6 +34,18 @@ function App() {
                     <Menu.Item key="4" icon={<QuestionCircleOutlined />}>
                         <Link to={{ pathname: '/question' }}>问题管理</Link>
                     </Menu.Item>
+                    <SubMenu
+                        key="sub1"
+                        icon={<UserOutlined />}
+                        title="志愿服务"
+                    >
+                        <Menu.Item key="5" icon={<QuestionCircleOutlined />}>
+                            <Link to="/volunteer/create">创建服务</Link>
+                        </Menu.Item>
+                        <Menu.Item key="6" icon={<QuestionCircleOutlined />}>
+                            option2
+                        </Menu.Item>
+                    </SubMenu>
                 </Menu>
             </Sider>
             <Layout className="site-layout">

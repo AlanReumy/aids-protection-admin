@@ -15,3 +15,5 @@ export const DeleteApi = (page) => {
 export const UpdateApi = (page) => {
     return (body) => request.post(`/${page}/update`, body)
 }
+
+export const UploadImageApi = () => request.post('/upload')
