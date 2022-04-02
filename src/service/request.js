@@ -9,6 +9,12 @@ const instance = axios.create(axiosOption)
 
 instance.interceptors.request.use(
     (config) => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            config.headers = {
+                Authorization: `Bearer ${token}`
+            }
+        }
         return config
     },
     (err) => {
@@ -18,6 +24,9 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
     (res) => {
+        if (res.data.data.token) {
+            localStorage.setItem('token', res.data.data.token)
+        }
         return res.data.data
     },
     (err) => {
