@@ -8,6 +8,7 @@ import Question from '../pages/Question'
 import Answer from '../pages/Answer'
 import CreateVolunteer from '../pages/Volunteer/create'
 import VolunteerList from '../pages/Volunteer/list'
+import ExchangeItem from '../pages/ExchangeItem/index'
 
 const BaseRouter = () => {
     return (
@@ -26,6 +27,10 @@ const BaseRouter = () => {
                     <Route
                         path="/volunteer/list"
                         element={<VolunteerList />}
+                    ></Route>
+                    <Route
+                        path="/exchangeItem"
+                        element={<ExchangeItem />}
                     ></Route>
                 </Route>
                 <Route path="/login" element={<Login />}></Route>

@@ -6,7 +6,11 @@ import {
     MenuUnfoldOutlined,
     MenuFoldOutlined,
     UserOutlined,
-    VideoCameraOutlined
+    VideoCameraOutlined,
+    GiftOutlined,
+    DotChartOutlined,
+    PlusCircleOutlined,
+    IdcardOutlined
 } from '@ant-design/icons'
 const { SubMenu } = Menu
 const { Header, Sider, Content } = Layout
@@ -36,16 +40,19 @@ function App() {
                     </Menu.Item>
                     <SubMenu
                         key="sub1"
-                        icon={<UserOutlined />}
+                        icon={<IdcardOutlined />}
                         title="志愿服务"
                     >
-                        <Menu.Item key="5" icon={<QuestionCircleOutlined />}>
+                        <Menu.Item key="5" icon={<PlusCircleOutlined />}>
                             <Link to="/volunteer/create">创建服务</Link>
                         </Menu.Item>
-                        <Menu.Item key="6" icon={<QuestionCircleOutlined />}>
+                        <Menu.Item key="6" icon={<DotChartOutlined />}>
                             <Link to="/volunteer/list">服务列表</Link>
                         </Menu.Item>
                     </SubMenu>
+                    <Menu.Item key="7" icon={<GiftOutlined />}>
+                        <Link to="/exchangeItem">积分商城</Link>
+                    </Menu.Item>
                 </Menu>
             </Sider>
             <Layout className="site-layout">
