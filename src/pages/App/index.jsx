@@ -53,6 +53,18 @@ function App() {
                     <Menu.Item key="7" icon={<GiftOutlined />}>
                         <Link to="/exchangeItem">积分商城</Link>
                     </Menu.Item>
+                    <SubMenu
+                        key="sub2"
+                        icon={<IdcardOutlined />}
+                        title="文章管理"
+                    >
+                        <Menu.Item key="8" icon={<PlusCircleOutlined />}>
+                            <Link to="/article/create">创建文章</Link>
+                        </Menu.Item>
+                        <Menu.Item key="9" icon={<DotChartOutlined />}>
+                            <Link to="/article/list">文章列表</Link>
+                        </Menu.Item>
+                    </SubMenu>
                 </Menu>
             </Sider>
             <Layout className="site-layout">

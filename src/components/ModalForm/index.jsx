@@ -73,6 +73,24 @@ export default function ModalForm(props) {
                                         <RangePicker />
                                     </Form.Item>
                                 )
+                            case 'type':
+                                return (
+                                    <Form.Item
+                                        label={item.label}
+                                        name={item.field}
+                                        key={item.field}
+                                        rules={item.rules}
+                                    >
+                                        <Radio.Group>
+                                            <Radio value={item.typeValue[0]}>
+                                                {item.typeField[0]}
+                                            </Radio>
+                                            <Radio value={item.typeValue[1]}>
+                                                {item.typeField[1]}
+                                            </Radio>
+                                        </Radio.Group>
+                                    </Form.Item>
+                                )
                             default:
                                 break
                         }

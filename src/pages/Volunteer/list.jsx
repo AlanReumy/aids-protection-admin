@@ -49,7 +49,7 @@ export default function VolunteerList() {
             })
             setData(() => res)
         })
-    })
+    }, [])
     return (
         <div>
             <Table columns={columns} dataSource={data} />

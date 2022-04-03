@@ -9,6 +9,8 @@ import Answer from '../pages/Answer'
 import CreateVolunteer from '../pages/Volunteer/create'
 import VolunteerList from '../pages/Volunteer/list'
 import ExchangeItem from '../pages/ExchangeItem/index'
+import CreateArticle from '../pages/Article/create'
+import ArticleList from '../pages/Article/list'
 
 const BaseRouter = () => {
     return (
@@ -31,6 +33,14 @@ const BaseRouter = () => {
                     <Route
                         path="/exchangeItem"
                         element={<ExchangeItem />}
+                    ></Route>
+                    <Route
+                        path="/article/create"
+                        element={<CreateArticle />}
+                    ></Route>
+                    <Route
+                        path="/article/list"
+                        element={<ArticleList />}
                     ></Route>
                 </Route>
                 <Route path="/login" element={<Login />}></Route>
