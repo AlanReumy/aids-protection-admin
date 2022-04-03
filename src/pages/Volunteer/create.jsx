@@ -1,28 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Input, Button, message, Upload, DatePicker } from 'antd'
-import { UploadOutlined } from '@ant-design/icons'
+import { Input, Button, message, DatePicker } from 'antd'
 import E from 'wangeditor'
 import { CreateVolunteerApi } from '../../service/api/Volunteer'
-import FormPage from './upload'
 const { RangePicker } = DatePicker
-
-const props = {
-    name: 'file',
-    action: 'https://twitzz.cn/api/upload',
-    headers: {
-        authorization: 'Bearer ' + localStorage.getItem('token')
-    },
-    onChange(info) {
-        if (info.file.status !== 'uploading') {
-            console.log(info.file, info.fileList)
-        }
-        if (info.file.status === 'done') {
-            message.success(`${info.file.name} file uploaded successfully`)
-        } else if (info.file.status === 'error') {
-            message.error(`${info.file.name} file upload failed.`)
-        }
-    }
-}
 
 export default function CreateVolunteer() {
     const [title, setTitle] = useState('')
@@ -66,25 +46,20 @@ export default function CreateVolunteer() {
 
     return (
         <div>
-            <div>
-                <FormPage />
-            </div>
             <div style={{ display: 'flex' }}>
                 <Button type="primary" onClick={createVolunteer}>
                     创建
                 </Button>
-                <RangePicker onChange={dateChange} />
-                <Upload {...props}>
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
-                </Upload>
-                ,
+                <RangePicker
+                    style={{ marginLeft: '20px' }}
+                    onChange={dateChange}
+                />
             </div>
             <Input
                 placeholder="请输入标题"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-
             <div>
                 <div
                     id="div1"
