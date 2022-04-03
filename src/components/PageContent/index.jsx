@@ -121,9 +121,12 @@ export default function PageContent(props) {
 
     return (
         <div>
-            <Button type="primary" onClick={addItem}>
-                新增
-            </Button>
+            {props.actions.CreateApi && (
+                <Button type="primary" onClick={addItem}>
+                    新增
+                </Button>
+            )}
+
             <ModalForm
                 title={title}
                 isModalVisible={isModalVisible}

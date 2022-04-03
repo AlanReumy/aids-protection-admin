@@ -43,7 +43,7 @@ function App() {
                             <Link to="/volunteer/create">创建服务</Link>
                         </Menu.Item>
                         <Menu.Item key="6" icon={<QuestionCircleOutlined />}>
-                            option2
+                            <Link to="/volunteer/list">服务列表</Link>
                         </Menu.Item>
                     </SubMenu>
                 </Menu>

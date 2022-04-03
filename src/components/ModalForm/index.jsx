@@ -1,5 +1,6 @@
 import React from 'react'
-import { Modal, Form, Input, Radio } from 'antd'
+import { Modal, Form, Input, Radio, DatePicker } from 'antd'
+const { RangePicker } = DatePicker
 
 export default function ModalForm(props) {
     return (
@@ -59,6 +60,17 @@ export default function ModalForm(props) {
                                             <Radio value={true}>是</Radio>
                                             <Radio value={false}>不是</Radio>
                                         </Radio.Group>
+                                    </Form.Item>
+                                )
+                            case 'date':
+                                return (
+                                    <Form.Item
+                                        label={item.label}
+                                        name={item.field}
+                                        key={item.field}
+                                        rules={item.rules}
+                                    >
+                                        <RangePicker />
                                     </Form.Item>
                                 )
                             default:

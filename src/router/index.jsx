@@ -7,6 +7,7 @@ import Game from '../pages/Game'
 import Question from '../pages/Question'
 import Answer from '../pages/Answer'
 import CreateVolunteer from '../pages/Volunteer/create'
+import VolunteerList from '../pages/Volunteer/list'
 
 const BaseRouter = () => {
     return (
@@ -21,6 +22,10 @@ const BaseRouter = () => {
                     <Route
                         path="/volunteer/create"
                         element={<CreateVolunteer />}
+                    ></Route>
+                    <Route
+                        path="/volunteer/list"
+                        element={<VolunteerList />}
                     ></Route>
                 </Route>
                 <Route path="/login" element={<Login />}></Route>
